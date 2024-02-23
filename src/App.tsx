@@ -1,25 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Description from './components/description';
 
 function App() {
+  /*
+  const [contador, setContador] = React.useState(1);
+
+  function aumentar(){
+    console.log("Entra a la función aumentar");
+    setContador(contador + 1);
+  }
+  */
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <div className='Description'>
+        <Description label='Aqui va la descripción'></Description>
+      </div>
     </div>
+
   );
 }
 
