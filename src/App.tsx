@@ -1,24 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Button from './components/Button';
+
+import Display from './components/Display'; 
 
 function App() {
+  const [contador, setContador] = React.useState(1);
+
+  function aumentar(){
+    console.log("Entra a la función aumentar");
+    setContador(contador + 1);
+  }
+  function reducir(){
+    console.log("Entra a la función aumentar");
+    setContador(contador - 1);
+  }
+
+  function nothing(){
+    
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <p>My pokemon: {contador}</p>
+      
+      <br>
+      </br>
+      <br>
+      </br>
+      <div>
+        <Display onClick = {()=> nothing()} ></Display>
+      </div>
+
+      <Button label="Previous" onClick={()=>reducir()}></Button>
+      <Button label="Next" color='green' onClick={()=>aumentar()}></Button>
+      
+
     </div>
   );
 }
