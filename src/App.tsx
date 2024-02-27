@@ -1,11 +1,10 @@
 import React from 'react';
 import './App.css';
+  /*
 import Button from './components/Button';
-
 import {Pokemon} from './models/Pokemon';
 import {PokeApi} from './api/PokeApi';
-import PokemonComponent from './components/Pokemon';
-
+import PokemonComponent from './components/Pokemon'
 import Display from './components/Display'; 
 /*
 function App() {
@@ -15,6 +14,8 @@ function App() {
     console.log("Entra a la función aumentar");
     setContador(contador + 1);
   }
+
+  */
   function reducir(){
     console.log("Entra a la función aumentar");
     setContador(contador - 1);
@@ -41,6 +42,7 @@ function App() {
       
 
     </div>
+
   );
 }
 
