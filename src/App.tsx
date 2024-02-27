@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-  /*
+
 import Button from './components/Button';
 import {Pokemon} from './models/Pokemon';
 import {PokeApi} from './api/PokeApi';
@@ -15,7 +15,7 @@ function App() {
     setContador(contador + 1);
   }
 
-  */
+  *
   function reducir(){
     console.log("Entra a la función aumentar");
     setContador(contador - 1);
@@ -72,7 +72,7 @@ function App() {
     <div className="App">
       <p>Hello World {pokemonNumber}</p>
       <input onChange={(event)=>{setPokemonNumber(event.target.value)}} className="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" value={pokemonNumber}></input>
-      <Button label="Buscar" color='green' onClick={()=>buscar()}></Button>
+      <Button label="Buscar" onClick={()=>buscar()}></Button>
       {loading && <p>Cargando...</p>}
       {(!loading && pokemon &&!error) && <>
         <PokemonComponent pokemon={pokemon}></PokemonComponent>
